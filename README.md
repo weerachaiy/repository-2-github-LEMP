@@ -39,9 +39,6 @@ services:
 ```
 #!/usr/bin/env bash
 
-# PHP
-PHP_VERSION=latest
-
 # MySQL
 MYSQL_VERSION=8.0.21
 MYSQL_HOST=mysql
