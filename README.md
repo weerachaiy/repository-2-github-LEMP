@@ -13,12 +13,21 @@ services:
             - "./html/:/var/www/html/"
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
+        depends_on:
+            - mysqldb
+        networks:
+            - XXX
+
     php:
         build: ./php
         container_name: php
         volumes:
             - "./html/:/var/www/html/"
         restart: always
+        depends_on:
+            - mysqldb
+        networks:
+            - XXX        
     mysqldb:
         image: mysql:latest
         container_name: mysqldb
@@ -32,6 +41,14 @@ services:
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
             - MYSQL_USER=${MYSQL_USER}
             - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        networks:
+            - XXX
+networks:
+    XXX:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 10.10.1.0/24
 
 ```
 
