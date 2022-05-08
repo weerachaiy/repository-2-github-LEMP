@@ -14,7 +14,7 @@ services:
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
     php:
-        image: php:7.4-fpm-alpine
+        build: ./php
         container_name: php
         volumes:
             - "./html/:/var/www/html/"
@@ -22,6 +22,8 @@ services:
     mysqldb:
         image: mysql:latest
         container_name: mysqldb
+        ports:
+            - "3306:3306"
         restart: always
         env_file:
             - ".env"
