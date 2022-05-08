@@ -14,7 +14,7 @@ services:
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
     php:
-        image: php:latest
+        image: php:latest-fpm
         container_name: php
         volumes:
             - "./html/:/var/www/html/"
