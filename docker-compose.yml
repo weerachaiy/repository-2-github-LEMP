@@ -10,14 +10,8 @@ services:
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
     php:
-        image: php:7.4-fpm-alpine
+        build: ./php
         container_name: php
-        command:
-            - /bin/sh
-            - -c
-            - |
-               docker-php-ext-install mysqli
-               php-fpm
         volumes:
             - "./html/:/var/www/html/"
         restart: always
