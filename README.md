@@ -59,3 +59,8 @@ services:
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
 ```
+
+สั่งงาน docker-compose
+```
+docker-compose up -d
+```
