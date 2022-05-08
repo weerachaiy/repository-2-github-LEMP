@@ -40,10 +40,7 @@ services:
 #!/usr/bin/env bash
 
 # MySQL
-MYSQL_VERSION=8.0.21
-MYSQL_HOST=mysql
 MYSQL_DATABASE=test
-MYSQL_ROOT_USER=root
 MYSQL_ROOT_PASSWORD=root
 MYSQL_USER=dev
 MYSQL_PASSWORD=dev
