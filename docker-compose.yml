@@ -8,6 +8,7 @@ services:
         volumes:
             - "./html/:/var/www/html/"
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
+            - "./nginx/phpmyadmin.conf:/etc/nginx/conf.d/phpmyadmin.conf"
         restart: always
         depends_on:
             - mysqldb
@@ -20,7 +21,7 @@ services:
         depends_on:
             - mysqldb
     phpmyadmin:
-        container_name: xops-phpmyadmin
+        container_name: phpmyadmin
         restart: always
         image: phpmyadmin/phpmyadmin
         depends_on:
