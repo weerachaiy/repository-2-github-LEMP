@@ -8,19 +8,12 @@ services:
         image: nginx:alpine
         volumes:
             - "./html:/var/www/html"
-        ports:
-            - "80:80"
-        environment:
-            - NGINX_HOST=${NGINX_HOST}
         restart: always
-        depends_on:
-            - php
-            - mysqldb
+
     php:
         image: nanoninja/php-fpm:${PHP_VERSION}
         restart: always
-        volumes:
-            - "./html:/var/www/html"
+        
     mysqldb:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST}
