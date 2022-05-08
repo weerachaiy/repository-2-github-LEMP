@@ -6,7 +6,7 @@ version: '2'
 services:
 
   php:
-    image: php:apache
+    image: php:nginx
     container_name: lemp_php7_apache
     restart: always
     volumes:
