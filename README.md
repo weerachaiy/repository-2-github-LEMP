@@ -64,3 +64,8 @@ services:
 ```
 docker-compose up -d
 ```
+
+หยุดทำงาน docker-compose
+```
+docker-compose down
+```
