@@ -13,6 +13,11 @@ services:
             - mysqldb
         networks:
             - XXX
+        environment:
+            - PMA_HOST="mariadb"
+            - PMA_USER=${MYSQL_USER}
+            - PMA_PASSWORD=${MYSQL_PASSWORD}
+            - PMA_DB=${MYSQL_DATABASE}
     php:
         build: ./php
         container_name: php
@@ -32,6 +37,7 @@ services:
         env_file:
             - ".env"
         environment:
+            - PMA_HOST="mariadb"
             - MYSQL_DATABASE=${MYSQL_DATABASE}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
             - MYSQL_USER=${MYSQL_USER}
