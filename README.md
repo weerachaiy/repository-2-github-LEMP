@@ -60,6 +60,8 @@ services:
             - "./data/db/mysql:/var/lib/mysql"
 ```
 
+สร้าง .env
+
 สร้างไฟล์ชื่อ ``.env``  ใน VSC
 ```
 #!/usr/bin/env bash
