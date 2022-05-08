@@ -16,8 +16,8 @@ services:
             - "./html/:/var/www/html/"
         restart: always
     mysqldb:
-        image: mysql:${MYSQL_VERSION}
-        container_name: ${MYSQL_HOST}
+        image: mysql:latest
+        container_name: mysqldb
         restart: always
         env_file:
             - ".env"
