@@ -21,8 +21,7 @@ services:
         command:
             - /bin/sh
             - -c
-            - |
-            docker-php-ext-install mysqli
+            - docker-php-ext-install mysqli
         restart: always
     mysqldb:
         image: mysql:latest
