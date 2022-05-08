@@ -18,12 +18,6 @@ services:
         container_name: php
         volumes:
             - "./html/:/var/www/html/"
-        command:
-            - /bin/sh
-            - -c
-            - |
-               docker-php-ext-install mysqli
-               php-fpm
         restart: always
     mysqldb:
         image: mysql:latest
