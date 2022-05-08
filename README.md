@@ -5,12 +5,13 @@
 version: '3'
 services:
     nginx:
-        build: ./nginx/
+        image: nginx:alpine
         container_name: ngix
         ports:
             - "80:80"
         volumes:
             - "./html/:/var/www/html/"
+            - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
     php:
         image: php:7.0-fpm
