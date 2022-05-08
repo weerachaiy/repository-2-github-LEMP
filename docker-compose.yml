@@ -11,6 +11,10 @@ services:
         restart: always
         depends_on:
             - mysqldb
+        environment:
+            - PMA_USER=${MYSQL_USER}
+            - PMA_PASSWORD=${MYSQL_PASSWORD}
+            - PMA_DB=${MYSQL_DATABASE}
     php:
         build: ./php
         container_name: php
