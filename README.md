@@ -28,7 +28,7 @@ services:
             - XXX
             - YYY
     mysqldb:
-        image: mysql:latest
+        image: mysql:5.7.38
         container_name: mysqldb
         ports:
             - "3306:3306"
