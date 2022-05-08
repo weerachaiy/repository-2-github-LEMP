@@ -12,6 +12,11 @@ services:
     php:
         image: php:7.4-fpm-alpine
         container_name: php
+        command:
+            - /bin/sh
+            - -c
+            - |
+            docker-php-ext-install mysqli
         volumes:
             - "./html/:/var/www/html/"
         restart: always
