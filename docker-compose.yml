@@ -1,12 +1,18 @@
 version: '3'
 services:
-    web:
-        image: nginx:alpine
+    nginx:
+        build: ./nginx/
+        container_name: ngix
+        ports:
+            - "80:80"
         volumes:
-            - "./html:/var/www/html"
+            - "./html/:/var/www/html/"
         restart: always
     php:
-        image: nanoninja/php-fpm:${PHP_VERSION}
+        image: php:7.0-fpm
+        container_name: php
+        volumes:
+            - "./html/:/var/www/html/"
         restart: always
     mysqldb:
         image: mysql:${MYSQL_VERSION}
