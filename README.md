@@ -14,7 +14,7 @@ services:
             - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
         restart: always
     php:
-        build: php: php:7.4-fpm-alpine
+        image: php: php:7.4-fpm-alpine
         container_name: php
         volumes:
             - "./html/:/var/www/html/"
