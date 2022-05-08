@@ -6,8 +6,8 @@ version: '2'
 services:
 
   php:
-    image: php:nginx
-    container_name: lemp_php7_apache
+    image: nginx:alpine
+    container_name: nginx
     restart: always
     volumes:
       - ./html/:/var/www/html
@@ -16,7 +16,7 @@ services:
 
   db:
     image: mariadb:latest
-    container_name: lemp_mariadb
+    container_name: mariadb
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=123132123
