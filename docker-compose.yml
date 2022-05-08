@@ -48,6 +48,6 @@ networks:
     XXX:
         driver: bridge
         ipam:
-        config:
-            - subnet: 10.10.1.0/24
-              gateway: 10.10.1.1
+            config:
+                - subnet: 10.10.1.0/24
+                  gateway: 10.10.1.1
