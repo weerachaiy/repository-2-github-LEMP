@@ -5,7 +5,7 @@
 version: '3'
 services:
     nginx:
-        image: nginx:alpine
+        image: nginx:latest
         container_name: nginx
         ports:
             - "80:80"
