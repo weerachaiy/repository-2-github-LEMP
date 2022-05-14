@@ -1,3 +1,4 @@
+LEMP ที่ไม่มี L
 สร้าง docker-compose.yml
 
 สร้างไฟล์ชื่อ ``docker-compose.yml``  ใน VSC
