@@ -70,12 +70,17 @@ MYSQL_USER=dev
 MYSQL_PASSWORD=dev
 ```
 
-สั่งงาน docker-compose
+- สั่งสร้าง image ด้วย docker build
+```
+docker build php
+```
+
+- สั่งงาน docker-compose
 ```
 docker-compose up -d
 ```
 
-หยุดทำงาน docker-compose
+- หยุดทำงาน docker-compose
 ```
 docker-compose down
 ```
