@@ -1,7 +1,7 @@
 - LEMP ที่ไม่มี L
 - สร้าง docker-compose.yml
 
-สร้างไฟล์ชื่อ ``docker-compose.yml``  ใน VSC
+- สร้างไฟล์ชื่อ ``docker-compose.yml``  ใน VSC
 ```
 version: '3'
 services:
@@ -57,9 +57,9 @@ networks:
 
 ```
 
-สร้าง .env
+- สร้าง .env
 
-สร้างไฟล์ชื่อ ``.env``  ใน VSC
+- สร้างไฟล์ชื่อ ``.env``  ใน VSC
 ```
 #!/usr/bin/env bash
 
